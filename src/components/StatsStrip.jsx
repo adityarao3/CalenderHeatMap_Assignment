@@ -8,7 +8,11 @@ export default function StatsStrip({ bookings, year, month }) {
   );
 
   const fmtCurrency = (n) =>
-    '₹' + n.toLocaleString('en-IN');
+    new Intl.NumberFormat('en-IN', {
+      style: 'currency',
+      currency: 'INR',
+      maximumFractionDigits: 0,
+    }).format(n);
 
   const fmtPct = (n) => Math.round(n * 100) + '%';
 
