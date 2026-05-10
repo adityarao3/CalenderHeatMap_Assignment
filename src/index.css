@@ -17,16 +17,24 @@
   --red: #a83b32;
   --shadow: 0 18px 48px rgba(38, 54, 43, 0.12);
   --shadow-sm: 0 8px 20px rgba(38, 54, 43, 0.08);
-  --heat-0: #edf1ea;
-  --heat-1: #cfe5d7;
-  --heat-2: #8ec7ad;
-  --heat-3: #f0c366;
-  --heat-4: #e1844e;
-  --heat-5: #b73d33;
+  --heat-0: #f1f4ee;
+  --heat-1: #bfe8cd;
+  --heat-2: #55bd7d;
+  --heat-3: #f4cf4f;
+  --heat-4: #f07b2f;
+  --heat-5: #b92f2a;
   --selection: rgba(34, 111, 99, 0.24);
   --selection-border: #184f47;
+  --font-sans:
+    Aptos, "Segoe UI Variable", "Segoe UI", Inter, ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, sans-serif;
+  --font-display:
+    "Aptos Display", Aptos, "Segoe UI Variable Display", "Segoe UI", Inter, ui-sans-serif,
+    system-ui, sans-serif;
   font-family:
-    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    var(--font-sans);
+  font-size: 15.5px;
+  line-height: 1.5;
   color: var(--text);
   background: var(--bg);
   font-synthesis: none;
@@ -42,6 +50,7 @@
 body {
   margin: 0;
   min-width: 1120px;
+  font-family: var(--font-sans);
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.7), rgba(246, 247, 243, 0.2)),
     var(--bg);
@@ -54,6 +63,13 @@ input {
 
 button {
   color: inherit;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  letter-spacing: 0;
 }
 
 h1,
@@ -106,9 +122,10 @@ dd {
 
 .app-header h1 {
   margin-top: 4px;
-  font-size: 2.1rem;
+  font-size: 2.2rem;
   line-height: 1.05;
   letter-spacing: 0;
+  font-weight: 850;
 }
 
 .room-count {
@@ -328,9 +345,10 @@ dd {
 }
 
 .month-label {
-  font-size: 1.35rem;
+  font-size: 1.42rem;
   line-height: 1.2;
   letter-spacing: 0;
+  font-weight: 820;
 }
 
 .month-note {
@@ -410,7 +428,7 @@ dd {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 2px solid rgba(255, 255, 255, 0.55);
+  border: 2px solid rgba(255, 255, 255, 0.78);
   border-radius: 6px;
   cursor: pointer;
   user-select: none;
@@ -458,15 +476,15 @@ dd {
 }
 
 .day-number {
-  font-size: 1.05rem;
-  font-weight: 850;
+  font-size: 1.12rem;
+  font-weight: 900;
   line-height: 1;
 }
 
 .day-occupancy {
   margin-top: 6px;
-  font-size: 0.78rem;
-  font-weight: 800;
+  font-size: 0.8rem;
+  font-weight: 900;
 }
 
 .heatmap-legend {
@@ -489,8 +507,8 @@ dd {
 }
 
 .legend-swatch {
-  width: 26px;
-  height: 14px;
+  width: 32px;
+  height: 16px;
   border: 1px solid rgba(30, 37, 32, 0.08);
   border-radius: 3px;
 }

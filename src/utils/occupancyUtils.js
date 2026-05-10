@@ -49,7 +49,7 @@ export function getHeatmapColor(count) {
 }
 
 export function getHeatmapTextColor(count) {
-  return count <= 4 ? 'var(--text-on-light)' : 'var(--text-on-dark)';
+  return count <= 6 ? 'var(--text-on-light)' : 'var(--text-on-dark)';
 }
 
 /**
